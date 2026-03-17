@@ -39,16 +39,19 @@ while (opcion != -1)
 
 void AltaAlumno()
 {
-    Console.WriteLine("Ingrese el Nombre"):
+    Console.WriteLine("Ingrese el ID");
+    int id = int.Parse(Console.ReadLine());
+
+    Console.WriteLine("Ingrese el Nombre");
     string nombre = Console.ReadLine();
 
-Console.WriteLine("Ingrese la Edad"):
+    Console.WriteLine("Ingrese la Edad");
     int edad = int.Parse(Console.ReadLine());
 
-Console.WriteLine("Ingrese la Nota"):
-    int nota = int.Parse(Console.ReadLine());
+    Console.WriteLine("Ingrese la Nota");
+    double nota = int.Parse(Console.ReadLine());
 
-Estudiante nuevoEstudiante = new Estudiante(nombre, edad, nota);
+Estudiante nuevoEstudiante = new Estudiante(id, nombre, edad, nota);
 
 listaEstudiantes.Add(nuevoEstudiante);
 
