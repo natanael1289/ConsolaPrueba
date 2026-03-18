@@ -6,28 +6,24 @@ using System.Threading.Tasks;
 
 namespace AplicacionClase1
 {
-    public class Estudiante
+    internal class Estudiante(string pNombre , int pEdad , int pNota)
     {
-        private int aId;
-        private string aNombre;
-        private int aEdad;
-        private double aNota;
+        public string Nombre { get; set; } = pNombre;
 
-        public int Id { get { return aId; } set { aId = value; } }
-        public string Nombre { get { return aNombre; } set { aNombre = value; } }
-        public int Edad { get { return aEdad; } set { aEdad = value; } }
-        public double Nota { get { return aNota; } set { aNota = value; } }
+        public int Edad { get; set; } = pEdad;
+
+        public int Nota { get; set; } = pNota;
+
 
         public override string ToString()
         {
-            return "Mi nombre es: " + this.Nombre + " Mi edad es: " + this.Edad + " y mi nota es: " + this.Nota;
+            return "Mi nombre es: " + this.Nombre + " Mi edad es: " + this.Edad + " y mi nota es: " + this.Nota; 
         }
-        public Estudiante(int pId, string pNombre, int pEdad, double pNota)
-        {            
-            Id = pId;
-            Nombre = pNombre;
-            Edad = pEdad;
-            Nota = pNota;
-        }
+
+
+
+
+
+
     }
 }
